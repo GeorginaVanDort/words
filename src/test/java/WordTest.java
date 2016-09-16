@@ -61,4 +61,19 @@ public class WordTest{
     assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 
+  @Test
+  public void addDefinition_addsMultipleDefinitionsToList_true() {
+    Word testWord = new Word("Hello");
+    Definition testDefinition = new Definition("A boring greeting");
+    Definition testDefinition2 = new Definition("A boring greeting");
+    Definition testDefinition3 = new Definition("A boring greeting");
+    testWord.addDefinition(testDefinition);
+    testWord.addDefinition(testDefinition2);
+    testWord.addDefinition(testDefinition3);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+    assertTrue(testWord.getDefinitions().contains(testDefinition2));
+    assertTrue(testWord.getDefinitions().contains(testDefinition3));
+  }
+
+
 }

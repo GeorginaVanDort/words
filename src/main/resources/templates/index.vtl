@@ -1,0 +1,18 @@
+<h1>Super Slang Dictionary</h1><h3>Click each word to see their Definitions</h3>
+#if ($words)
+  <ul>
+    #foreach ($word in $words)
+      <li><a href="/word/$word.getId()">$word.getText()</a></li>
+    #end
+  </ul>
+#else
+  <p>No Super Slang Yet!</p>
+#end
+
+
+<form action="/word" method="post">
+  <label for="text">Add New Word Here</label>
+  <input id="text" name="text" type="text">
+
+  <button type="submit" class="btn btn-default">Add slang!</button>
+</form>

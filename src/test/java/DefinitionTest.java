@@ -39,5 +39,12 @@ public class DefinitionTest{
     assertEquals(Definition.find(testDefinition2.getId()), testDefinition2);
   }
 
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList_0() {
+    Definition testDefinition = new Definition("A common greeting");
+    Definition testDefinition2 = new Definition("An unusual greeting");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 
 }
