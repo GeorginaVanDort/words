@@ -54,7 +54,7 @@ public class WordTest{
     }
 
   @Test
-  public void addDefinition_addsDefinition_true() {
+  public void addDefinition_addsDefinitionToList_true() {
     Word testWord = new Word("Hello");
     Definition testDefinition = new Definition("A boring greeting");
     testWord.addDefinition(testDefinition);
