@@ -1,21 +1,21 @@
 <h1>$word.getText()</h1>
 
-<!-- /*#if ($definitions)
-  <ul>*/ -->
-    #foreach ($definition in $word.getDefinitions())
-      <li>$definition.getText()</li>
-    #end
-  <!-- </ul> -->
-<!-- /*#else
-  <p>No Definitions Yet!</p>
-#end*/ -->
+<hr>
 
+<h3>Common Definitions:</h3>
+#foreach ($definition in $word.getDefinitions())
+  <li><h4>$definition.getText()</h4></li>
+#end
+
+<hr>
 
 <form action="/definition" method="post">
-  <label for="text">Add A Definition Here</label>
-  <input id="text" name="text" type="text">
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
-  <button type="submit" class="btn btn-default">Add slang!</button>
+  <div class="">
+    <label for="text">Add Your Definition Here</label>
+    <input id="text" name="text" type="text">
+    <button type="submit" class="btn btn-default">Add slang!</button>
+  </div>
+
 </form>
-
-<a href="/">Return to Main Page</a>
