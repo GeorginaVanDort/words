@@ -46,4 +46,19 @@ public class WordTest{
     assertEquals(Word.find(testWord2.getId()), testWord2);
   }
 
+  @Test
+    public void getDefinitions_initiallyReturnsEmptyList_ArrayList() {
+      Word.clear();
+      Word testWord = new Word("Hello");
+      assertEquals(0, testWord.getDefinitions().size());
+    }
+
+  // @Test
+  // public void addDefinition_addsDefinition_true() {
+  //   Word testWord = new Word("Hello");
+  //   Definition testDefinition = new Definition("A boring greeting");
+  //   testWord.addDefinition(testDefinition);
+  //   assertTrue(testWord.getDefinitions().contains(testDefinition));
+  // }
+
 }
