@@ -3,12 +3,14 @@
 <hr>
 
 <h3>Common Definitions:</h3>
+<br>
+<br>
 #foreach ($definition in $word.getDefinitions())
   <li>$definition.getText()</li>
 #end
 
 <hr>
-
+<br>
 <form action="/definition" method="post">
   <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
@@ -19,5 +21,7 @@
   </div>
 
 </form>
-
+<br>
+<br>
+<br>
 <a href="/">Return to Main Page</a>
