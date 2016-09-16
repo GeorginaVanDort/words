@@ -6,7 +6,9 @@ import java.util.List;
 public class WordTest{
 
   @Test
-  public void method_behavior_ReturnType() {
-    //assertEquals(expected-output, methodBeingTested(arguments));
-  }
+   public void word_instantiatesCorrectly_true() {
+     Word testWord = new Word("hello");
+     assertEquals(true, testWord instanceof Word);
+   }
+
 }
