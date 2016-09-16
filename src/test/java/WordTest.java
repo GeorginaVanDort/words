@@ -53,12 +53,12 @@ public class WordTest{
       assertEquals(0, testWord.getDefinitions().size());
     }
 
-  // @Test
-  // public void addDefinition_addsDefinition_true() {
-  //   Word testWord = new Word("Hello");
-  //   Definition testDefinition = new Definition("A boring greeting");
-  //   testWord.addDefinition(testDefinition);
-  //   assertTrue(testWord.getDefinitions().contains(testDefinition));
-  // }
+  @Test
+  public void addDefinition_addsDefinition_true() {
+    Word testWord = new Word("Hello");
+    Definition testDefinition = new Definition("A boring greeting");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
 
 }
